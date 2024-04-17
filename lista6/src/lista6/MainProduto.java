@@ -27,7 +27,7 @@ public class MainProduto {
 		pecas2.add("mouse");
 		pecas2.add("mousepad");
 		pecas2.add("VOLKSWAGEN GOLF 20-TSI-GTI-16V-TURBO-GASOLINA-4P-AUTOMATICO");
-		p2.setPecas(pecas);
+		p2.setPecas(pecas2);
 		desktops.add(p2);
 
 		Desktop p3 = new Desktop();
@@ -38,7 +38,7 @@ public class MainProduto {
 		pecas3.add("mouse");
 		pecas3.add("mousepad");
 		pecas3.add("Panela Polishop Sauté Grand Vermelha 24cm");
-		p3.setPecas(pecas);
+		p3.setPecas(pecas3);
 		desktops.add(p3);
 
 		ArrayList<Smartphone> smartphones = new ArrayList<>();
@@ -60,13 +60,15 @@ public class MainProduto {
 		s3.setFabricante("Samsung");
 		s3.setDimensoesTela("1280x720");
 		smartphones.add(s3);
-		
+
 		for (Desktop desktop : desktops) {
 			System.out.println(desktop.getFabricante());
 			System.out.println(desktop.getCodBarras());
 			System.out.println(desktop.isGamer());
-			System.out.println(desktop.getPecas());
-			
+			for (String pecas6 : desktop.getPecas()) {
+				System.out.println(pecas6);
+			}
+
 		}
 
 		for (Smartphone smartphone : smartphones) {
@@ -76,8 +78,6 @@ public class MainProduto {
 			System.out.println(smartphone.getFabricante());
 
 		}
-		
-		
 
 	}
 }
